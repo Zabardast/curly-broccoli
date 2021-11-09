@@ -206,3 +206,7 @@ password    : Qwerty123
 * prix unitaire
 * quantité
 * description
+
+
+1 facture == 1 projet
+1 projet == 1 facture
