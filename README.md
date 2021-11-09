@@ -154,4 +154,55 @@ Après la connexion l’utilisateur aura un tableau de bord affichant l’état 
 
 * Un graphique avec l’évolution du CA annuel payé (par valeurs mensuelles). 
 
+# STRAPI
 
+sudo docker-compose up
+
+email       : hugo.molle@yahoo.fr
+password    : Qwerty123
+
+
+## TABLES
+
+### user
+* nom
+* prenom
+* date de naissance
+* adress email
+* numero de telephone
+* ca
+* taux de charge
+* password
+
+### client
+* id_user
+* type : enum
+* prenom (contact ou prenom)
+* nom
+* adress
+* numero de telephone
+* email
+
+### projet
+* nom
+* client
+* status : enum
+* prix
+
+### facture
+* numéro facture
+* intituler
+* état facture : enum {éditée, envoyée, payée} (obligatoire)
+* date creation
+* date derniere edition (obligatoire)
+* date de paiement limite (obligatoire)
+* type de paiement :enum {chèque, virement, paypal, autre}
+* date de paiement effectif
+* note de bas de page
+* id ligne de facturation list<ligne>
+
+### ligne
+* nom
+* prix unitaire
+* quantité
+* description
