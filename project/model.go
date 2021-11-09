@@ -18,6 +18,6 @@ type Model struct {
 	Id       int
 	Name     string
 	Customer Customer.Model
-	Status   string
+	Status   string `validate:"prospect, send_estimate, accepted_estimate, started, finished, canceled"`
 	Price    int
 }
